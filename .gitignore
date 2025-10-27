@@ -1,0 +1,7 @@
+env
+pycache/
+*.pyc
+transcriptions/
+.DS_Store
+*.swp
+

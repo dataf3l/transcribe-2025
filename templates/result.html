@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transcription Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 40px; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #28a745; }
+        h2 { color: #dc3545; }
+        pre { background-color: #e9ecef; padding: 15px; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }
+        a { color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if error %}
+            <h2>Error</h2>
+            <p>{{ error }}</p>
+        {% else %}
+            <h1>Transcription Successful!</h1>
+            <p>The following transcript has been sent to <strong>{{ email }}</strong>.</p>
+            <hr>
+            <pre>{{ transcript }}</pre>
+        {% endif %}
+        <br>
+        <a href="/">Transcribe another file</a>
+    </div>
+</body>
+</html>
